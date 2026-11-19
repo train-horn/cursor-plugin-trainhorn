@@ -1,0 +1,25 @@
+{
+  "name": "trainhorn-calc",
+  "version": "1.0.0",
+  "description": "Skills and rules for correct train horn and air horn math: SPL at distance with the inverse-square law (reference distance, units, air absorption, combining horns), air tank runtime from Boyle's law and compressor recovery. Tested snippets for the trainhorn-calc Python library and plain JavaScript.",
+  "author": {
+    "name": "Train Horn"
+  },
+  "homepage": "https://train-horn.com/tools/",
+  "repository": "https://github.com/train-horn/cursor-plugin-trainhorn",
+  "license": "MIT",
+  "keywords": [
+    "acoustics",
+    "decibel",
+    "spl",
+    "inverse-square-law",
+    "sound-level",
+    "train-horn",
+    "air-horn",
+    "air-tank",
+    "compressor",
+    "boyles-law",
+    "calculator"
+  ],
+  "logo": "https://github.com/train-horn.png"
+}
