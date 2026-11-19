@@ -1,0 +1,23 @@
+---
+description: Label where every decibel figure comes from (manufacturer claim, independent measurement, statutory limit, estimate)
+globs:
+alwaysApply: true
+---
+
+# Label decibel sources
+
+Every dB figure in code, data files, UI text or answers carries a source label:
+
+| Label | Use for |
+|---|---|
+| `MFR claim` | a manufacturer or seller rating, not independently verified |
+| `Independent` | a measurement by a third party with a stated distance and meter |
+| `Statutory` | a legal limit quoted from a statute or regulation |
+| `Estimate` | a value computed from another figure (inverse-square law, combining sources) |
+
+- Computed values are always `Estimate`, even when the input was a measurement.
+  Never present a calculation as a measurement.
+- Do not upgrade a `MFR claim` to a fact ("this horn is 150 dB"); write "rated 150 dB @ 10 ft (MFR claim)".
+- For statutory limits, cite the statute or page it came from and note that it is not legal advice.
+- In data structures, use an explicit field (for example `source: "mfr_claim" | "independent" | "statutory" | "estimate"`)
+  rather than a free-text comment.

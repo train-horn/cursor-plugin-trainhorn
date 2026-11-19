@@ -1,0 +1,17 @@
+---
+description: Always state the reference distance (and weighting) with every decibel value
+globs:
+alwaysApply: true
+---
+
+# Decibel values need a reference distance
+
+- Never write, print, store or compare a sound level without its distance: `150 dB @ 10 ft`,
+  `118 dB(A) @ 1 m`, not `150 dB`.
+- In code, keep the distance next to the level (for example a `ref_distance` + `unit` field
+  or argument). Do not hard-code an assumed distance without a named constant and a comment.
+- Before comparing two levels, move them to the same distance with the inverse-square law
+  (`L2 = L1 - 20*log10(d2/d1)`, distances in the same unit) and the same weighting.
+- If the source of a figure does not state a distance, say "distance not stated" instead of
+  guessing one.
+- Keep the frequency weighting (dB, dB(A), dB(C), peak) from the source and do not mix them.
